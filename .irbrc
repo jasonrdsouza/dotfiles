@@ -2,7 +2,7 @@
 require 'irb/completion'
 
 # Pretty printing
-require 'pp'
+require 'ap'
 
 # Fancy prompt
 IRB.conf[:PROMPT][:CUSTOM] = {
