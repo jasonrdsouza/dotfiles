@@ -20,6 +20,8 @@ rm -rf ~/.vim
 ln -s ~/dotfiles/.vim ~/.vim
 
 # Pry
+rm ~/.pryrc
+ln -s ~/dotfiles/.pryrc ~/.pryrc
 
 # IRB
 rm ~/.irbrc
