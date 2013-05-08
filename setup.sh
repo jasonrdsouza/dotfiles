@@ -12,6 +12,8 @@ rm ~/.config/fish/config.fish
 ln -s ~/dotfiles/.fish/config.fish ~/.config/fish/config.fish
 
 # Bash
+rm ~/.bashrc
+ln -s ~/dotfiles/.bashrc ~/.bashrc
 
 # Vim
 rm ~/.vimrc
