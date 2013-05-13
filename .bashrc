@@ -97,6 +97,13 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# Add Golang binaries to the path
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/gocode
+export PATH=$PATH:$HOME/gocode/bin
+# Helper aliases for go code
+alias gosrc="cd $GOPATH/src/github.com/jasonrdsouza"
+
 ############
 # TA stuff #
 ############
@@ -104,13 +111,6 @@ export TRIP_SCRIPTS=$HOME/tr-users/jdsouza
 if [ -f $TRIP_SCRIPTS/.triprc ]; then
     . $TRIP_SCRIPTS/.triprc
 fi
-
-# Add Golang binaries to the path
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/gocode
-export PATH=$PATH:$HOME/gocode/bin
-# Helper aliases for go code
-alias gosrc="cd $GOPATH/src/github.com/jasonrdsouza"
 
 # Add path for my own utils
 PATH=$PATH:$HOME/bin
