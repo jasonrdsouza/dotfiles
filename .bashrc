@@ -130,9 +130,6 @@ alias less="less -N -i -M -S"
 # Process Grep
 function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
 
-# Make rm move files to trash
-alias rm="trash-put"
-
 # Allow opening from command line
 alias open="xdg-open"
 
