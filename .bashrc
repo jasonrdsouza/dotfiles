@@ -116,13 +116,14 @@ fi
 PATH=$PATH:$HOME/bin
 
 # Make Vim the default terminal editor
-export EDITOR=vim
+export EDITOR="vim --noplugin"
 
 # Customize terminal prompt
 PS1="${user}\u@${host}\h:${path}\W\$(__git_ps1 \" (%s)\")\$ "
 
 # Vim in read only mode
 alias vimr="vim -R"
+alias pvim="vim --noplugin"
 
 # Start less with line numbers
 alias less="less -N -i -M -S"
