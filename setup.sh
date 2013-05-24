@@ -21,6 +21,8 @@ rm ~/.vimrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 rm -rf ~/.vim
 ln -s ~/dotfiles/.vim ~/.vim
+# Recheck out the submodule git repos
+git submodule update --init
 
 # Pry
 rm ~/.pryrc

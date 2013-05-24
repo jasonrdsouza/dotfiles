@@ -137,3 +137,5 @@ alias open="xdg-open"
 # Add Dart bins to path
 export PATH=$PATH:/usr/local/dart/dart-sdk/bin
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
