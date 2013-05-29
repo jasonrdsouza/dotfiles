@@ -31,3 +31,8 @@ ln -s ~/dotfiles/.pryrc ~/.pryrc
 # IRB
 rm ~/.irbrc
 ln -s ~/dotfiles/.irbrc ~/.irbrc
+
+# Git
+rm ~/.gitconfig
+ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+

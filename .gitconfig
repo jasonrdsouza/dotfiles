@@ -1,0 +1,7 @@
+[user]
+	email = jdsouza@tripadvisor.com
+[color]
+	ui = auto
+[alias]
+  bdiff = diff --name-status
+  graph = log --all --graph --decorate --oneline -n30
