@@ -1,0 +1,5 @@
+--type-set
+log=.log,.logfile
+
+--type-set
+hive=.hql,.hive

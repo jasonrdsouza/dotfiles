@@ -36,3 +36,7 @@ ln -s ~/dotfiles/.irbrc ~/.irbrc
 rm ~/.gitconfig
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 
+# Ack
+rm ~/.ackrc
+ln -s ~/dotfiles/.ackrc ~/.ackrc
+
