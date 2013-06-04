@@ -40,3 +40,7 @@ ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 rm ~/.ackrc
 ln -s ~/dotfiles/.ackrc ~/.ackrc
 
+# Sqsh
+rm ~/.sqshrc
+ln -s ~/dotfiles/.sqshrc ~/.sqshrc
+

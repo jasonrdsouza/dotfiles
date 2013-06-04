@@ -11,12 +11,8 @@ rvm > /dev/null
 
 #
 # Add custom locations to $PATH
-# - golang bin
-# - my gocode bin
-# - dart bin
-# - local bin
 # 
-set -g fish_user_paths /usr/local/go/bin $HOME/gocode/bin /usr/local/dart/dart-sdk/bin {$HOME}/bin
+set -g fish_user_paths $HOME/gocode/bin {$HOME}/bin
 
 #
 # Golang environment variables
