@@ -20,9 +20,9 @@ set -g fish_user_paths $HOME/gocode/bin {$HOME}/bin
 set -g -x GOPATH {$HOME}/gocode
 
 #
-# Set EDITOR variable (not sure if its needed)
+# Set EDITOR variable to be vanilla vim
 #
-set -g -x EDITOR vim
+set -g -x EDITOR "vim --noplugin"
 
 #
 # Add personal functions path

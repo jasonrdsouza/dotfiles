@@ -123,7 +123,8 @@ PS1="${user}\u@${host}\h:${path}\W\$(__git_ps1 \" (%s)\")\$ "
 
 # Vim in read only mode
 alias vimr="vim -R"
-alias pvim="vim --noplugin"
+# Vanilla vim
+alias vvim="vim --noplugin"
 
 # Start less with line numbers
 alias less="less -N -i -M -S"
