@@ -2,6 +2,6 @@
 # Start less with line numbers
 #
 
-function less --description "Less pager with line numbers"
-  command less -N $argv
+function less --description "Less pager with line numbers and status bar"
+  command less -N -M $argv
 end
