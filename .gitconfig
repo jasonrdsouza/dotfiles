@@ -6,5 +6,5 @@
   changes = diff --name-status
   diffstat = diff --stat -r
   graph = log --all --graph --decorate --oneline -n30
-  patch-svn = !sh -c 'git diff --no-prefix master `git rev-parse --abbrev-ref HEAD` | patch -p0 -d $1' -
+  patch-svn = !sh -c 'git diff --no-prefix master `git rev-parse --abbrev-ref HEAD` | patch -p0 -N -r /tmp/patch_rejects -d $1' -
 
