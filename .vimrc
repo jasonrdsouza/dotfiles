@@ -12,8 +12,8 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/powerline'
 Bundle 'mileszs/ack.vim'
+Bundle 'bling/vim-airline'
 
 set softtabstop=2              " soft tabs = 2 spaces 
 set tabstop=2                  " tabs = 2 spaces
@@ -41,9 +41,11 @@ colorscheme bubblegum
 
 set autoindent smartindent
 
-" Configure powerline
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-set laststatus=2              " always show the statusline
+" Airline
+set laststatus=2               " Always show statuslinee
+set noshowmode                 " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+let g:airline_powerline_fonts=1
+let g:airline_theme='dark'
 
 " CtrlP
 map <c-b> <ESC>:CtrlPBuffer<CR>
