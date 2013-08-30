@@ -11,9 +11,9 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'bling/vim-airline'
+Bundle 'git://git.wincent.com/command-t.git'
 
 set softtabstop=2              " soft tabs = 2 spaces 
 set tabstop=2                  " tabs = 2 spaces
@@ -47,9 +47,12 @@ set noshowmode                 " Hide the default mode text (e.g. -- INSERT -- b
 let g:airline_powerline_fonts=1
 let g:airline_theme='dark'
 
+" Command T
+map <c-p> \t
+
 " CtrlP
-map <c-b> <ESC>:CtrlPBuffer<CR>
-map <c-Space> <ESC>:CtrlPMRUFiles<CR>
+"map <c-b> <ESC>:CtrlPBuffer<CR>
+"map <c-Space> <ESC>:CtrlPMRUFiles<CR>
 
 " Default GVim size
 if has("gui_running")
