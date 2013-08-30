@@ -14,6 +14,8 @@ Bundle 'gmarik/vundle'
 Bundle 'mileszs/ack.vim'
 Bundle 'bling/vim-airline'
 Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'scrooloose/nerdtree'
+
 
 set softtabstop=2              " soft tabs = 2 spaces 
 set tabstop=2                  " tabs = 2 spaces
