@@ -13,7 +13,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'mileszs/ack.vim'
 Bundle 'bling/vim-airline'
-Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 
 
@@ -50,11 +50,11 @@ let g:airline_powerline_fonts=1
 let g:airline_theme='dark'
 
 " Command T
-map <c-p> \t
+"map <c-p> \t
 
 " CtrlP
-"map <c-b> <ESC>:CtrlPBuffer<CR>
-"map <c-Space> <ESC>:CtrlPMRUFiles<CR>
+map <c-b> <ESC>:CtrlPBuffer<CR>
+map <c-Space> <ESC>:CtrlPMRUFiles<CR>
 
 " Default GVim size
 if has("gui_running")
