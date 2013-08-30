@@ -49,9 +49,6 @@ set noshowmode                 " Hide the default mode text (e.g. -- INSERT -- b
 let g:airline_powerline_fonts=1
 let g:airline_theme='dark'
 
-" Command T
-"map <c-p> \t
-
 " CtrlP
 map <c-b> <ESC>:CtrlPBuffer<CR>
 map <c-Space> <ESC>:CtrlPMRUFiles<CR>
