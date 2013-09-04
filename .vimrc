@@ -15,6 +15,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'bling/vim-airline'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'altercation/vim-colors-solarized'
 
 
 set softtabstop=2              " soft tabs = 2 spaces 
@@ -38,8 +39,8 @@ filetype plugin indent on      " enable file type detection
 set mouse=a                    " enable the mouse
 
 set t_Co=256                   " use 256 colors
-"set background=dark
-colorscheme bubblegum
+set background=dark
+colorscheme solarized
 
 set autoindent smartindent
 
