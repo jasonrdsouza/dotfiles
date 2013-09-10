@@ -40,7 +40,7 @@ set mouse=a                    " enable the mouse
 
 set t_Co=256                   " use 256 colors
 set background=dark
-colorscheme solarized
+colorscheme bubblegum
 
 set autoindent smartindent
 
@@ -58,6 +58,7 @@ map <c-Space> <ESC>:CtrlPMRUFiles<CR>
 if has("gui_running")
   " GUI is running or is about to start.
   set lines=60 columns=200
+  colorscheme solarized
 endif
 
 " Alias tabbing to reselect text 
