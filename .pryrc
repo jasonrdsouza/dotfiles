@@ -14,6 +14,17 @@ class Hash
   end
 end
 
+
+# Useful locations
+#
+trtop = ENV['TRTOP']
+whtop = ENV['WHTOP']
+commerce_scripts = File.join(trtop, 'scripts', 'commerce')
+hadutils_path = File.join(trtop, 'ruby', 'warehouse', 'hadutils.rb')
+cutils_path = File.join(trtop, 'ruby', 'commerce', 'cutils.rb')
+whois_path = File.join(commerce_scripts, 'fraud_filtering', 'whois.rb')
+
+
 # Print ruby version and gemset info
 puts "Ruby #{RUBY_VERSION}-p#{RUBY_PATCHLEVEL} (Gemset: #{`rvm gemset name`.chomp}) #{RUBY_PLATFORM}"
 
