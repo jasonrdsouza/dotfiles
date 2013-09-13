@@ -53,6 +53,7 @@ let g:airline_theme='dark'
 " CtrlP
 map <c-b> <ESC>:CtrlPBuffer<CR>
 map <c-Space> <ESC>:CtrlPMRUFiles<CR>
+let g:ctrlp_working_path_mode = 'a'
 
 " Default GVim size
 if has("gui_running")

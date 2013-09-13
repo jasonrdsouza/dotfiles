@@ -3,3 +3,9 @@ log=.log,.logfile
 
 --type-set
 hive=.hql,.hive
+
+--type-set
+erb=.erb,.html.erb
+
+--type-set
+csv=.csv
