@@ -9,3 +9,6 @@ erb=.erb,.html.erb
 
 --type-set
 csv=.csv
+
+--type-set
+cron=.m4
