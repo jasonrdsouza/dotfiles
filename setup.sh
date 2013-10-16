@@ -40,3 +40,6 @@ ln -s ~/dotfiles/.ackrc ~/.ackrc
 rm ~/.sqshrc
 ln -s ~/dotfiles/.sqshrc ~/.sqshrc
 
+# Redshift
+rm ~/.config/redshift.conf
+ln -s ~/dotfiles/redshift.conf ~/.config/redshift.conf
