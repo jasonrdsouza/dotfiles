@@ -9,7 +9,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 Bundle 'mileszs/ack.vim'
 Bundle 'bling/vim-airline'
@@ -18,7 +18,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
 
 
-set softtabstop=2              " soft tabs = 2 spaces 
+set softtabstop=2              " soft tabs = 2 spaces
 set tabstop=2                  " tabs = 2 spaces
 set shiftwidth=2               " round indent actions to multiples of 2
 
@@ -62,7 +62,12 @@ if has("gui_running")
   colorscheme solarized
 endif
 
-" Alias tabbing to reselect text 
+" Alias tabbing to reselect text
 vmap > >gv
 vmap < <gv
 
+" Easier moving around splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
