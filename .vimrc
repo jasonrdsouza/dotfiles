@@ -58,8 +58,9 @@ let g:ctrlp_working_path_mode = 'a'
 " Default GVim size
 if has("gui_running")
   " GUI is running or is about to start.
-  set lines=60 columns=200
+  set lines=40 columns=100
   colorscheme solarized
+  set guifont=Ubuntu\ Mono\ derivative\ Powerline:h16
 endif
 
 " Alias tabbing to reselect text
