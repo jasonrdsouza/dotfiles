@@ -16,6 +16,7 @@ Bundle 'bling/vim-airline'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'scrooloose/syntastic'
 
 
 set softtabstop=2              " soft tabs = 2 spaces
@@ -53,7 +54,14 @@ let g:airline_theme='dark'
 " CtrlP
 map <c-b> <ESC>:CtrlPBuffer<CR>
 map <c-Space> <ESC>:CtrlPMRUFiles<CR>
+" Mac Specific
+map <D-b> <ESC>:CtrlPBuffer<CR>
+map <D-Space> <ESC>:CtrlPMRUFiles<CR>
+" CtrlP Configs
 let g:ctrlp_working_path_mode = 'a'
+let g:ctrlp_max_files = 0
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jar,*.gif,*.jpg,*.png,*.svg,*.ico,*.gz
 
 " Default GVim size
 if has("gui_running")
