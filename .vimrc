@@ -22,8 +22,8 @@ Bundle 'scrooloose/syntastic'
 set softtabstop=2              " soft tabs = 2 spaces
 set tabstop=2                  " tabs = 2 spaces
 set shiftwidth=2               " round indent actions to multiples of 2
-
 set expandtab                  " expand tabs to spaces
+
 set number          		       " enable line numbers
 set showmode                   " so you know what mode you are in
 
@@ -38,6 +38,7 @@ syntax on                      " enable syntax highlighting
 set clipboard=unnamed          " allow copy/pasting from system clipboard
 filetype plugin indent on      " enable file type detection
 set mouse=a                    " enable the mouse
+set encoding=utf-8
 
 set t_Co=256                   " use 256 colors
 set background=dark
@@ -80,3 +81,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" Disable arrow keys to better GROK vim
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
