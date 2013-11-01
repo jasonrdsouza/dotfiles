@@ -27,6 +27,7 @@ set expandtab                  " expand tabs to spaces
 " Searching
 set hlsearch                   " highlight search terms
 set incsearch                  " do incremental searching
+set ignorecase                 " case insensitive searching
 set smartcase                  " search upper/ all cases intelligently
 set showmatch                  " show matching parenthesis
 
