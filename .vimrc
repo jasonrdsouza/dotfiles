@@ -42,7 +42,7 @@ set mouse=a                    " enable the mouse
 set encoding=utf-8
 set autoindent smartindent
 set list                       " show trailing whitespace
-set listchars=tab:▸\ ,trail:▫  
+set listchars=tab:▸\ ,trail:▫
 
 " Colors & Themeing
 set t_Co=256                   " use 256 colors
