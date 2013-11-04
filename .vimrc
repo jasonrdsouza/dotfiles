@@ -17,6 +17,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/syntastic'
+Bundle 'JuliaLang/julia-vim'
 
 " Tabs and spaces
 set softtabstop=2              " soft tabs = 2 spaces
@@ -41,7 +42,8 @@ set clipboard=unnamed          " allow copy/pasting from system clipboard
 filetype plugin indent on      " enable file type detection
 set mouse=a                    " enable the mouse
 set encoding=utf-8
-set autoindent smartindent
+set autoindent 
+set smartindent
 set list                       " show trailing whitespace
 set listchars=tab:▸\ ,trail:▫
 
