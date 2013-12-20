@@ -43,3 +43,8 @@ ln -s ~/dotfiles/.sqshrc ~/.sqshrc
 # Redshift
 rm ~/.config/redshift.conf
 ln -s ~/dotfiles/redshift.conf ~/.config/redshift.conf
+
+# Sqlite
+rm ~/.sqliterc
+ln -s ~/dotfiles/.sqliterc ~/.sqliterc
+
