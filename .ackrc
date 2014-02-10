@@ -12,3 +12,6 @@ csv=.csv
 
 --type-set
 cron=.m4
+
+--type-set
+markdown=.md,.markdown
