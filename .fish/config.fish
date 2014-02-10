@@ -7,7 +7,6 @@
 #
 # Setup RVM
 #
-rvm > /dev/null
 
 #
 # Add custom locations to $PATH

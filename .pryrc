@@ -19,10 +19,10 @@ end
 #
 trtop = ENV['TRTOP']
 whtop = ENV['WHTOP']
-commerce_scripts = File.join(trtop, 'scripts', 'commerce')
-hadutils_path = File.join(trtop, 'ruby', 'warehouse', 'hadutils.rb')
-cutils_path = File.join(trtop, 'ruby', 'commerce', 'cutils.rb')
-whois_path = File.join(commerce_scripts, 'fraud_filtering', 'whois.rb')
+commerce_scripts = File.join(trtop, 'scripts', 'commerce') if trtop
+hadutils_path = File.join(trtop, 'ruby', 'warehouse', 'hadutils.rb') if trtop
+cutils_path = File.join(trtop, 'ruby', 'commerce', 'cutils.rb') if trtop
+whois_path = File.join(commerce_scripts, 'fraud_filtering', 'whois.rb') if commerce_scripts
 
 
 # Print ruby version and gemset info
