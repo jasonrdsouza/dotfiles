@@ -80,7 +80,7 @@ if has("gui_running")
   " GUI is running or is about to start.
   set lines=40 columns=100
   colorscheme solarized
-  set guifont=Ubuntu\ Mono\ derivative\ Powerline:h16
+  set guifont="Ubuntu Mono derivative Powerline"
 endif
 
 " md is markdown
