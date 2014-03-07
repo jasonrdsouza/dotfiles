@@ -26,5 +26,5 @@ whois_path = File.join(commerce_scripts, 'fraud_filtering', 'whois.rb') if comme
 
 
 # Print ruby version and gemset info
-puts "Ruby #{RUBY_VERSION}-p#{RUBY_PATCHLEVEL} (Gemset: #{`rvm gemset name`.chomp}) #{RUBY_PLATFORM}"
+puts "Ruby #{RUBY_VERSION}-p#{RUBY_PATCHLEVEL} (#{RUBY_PLATFORM})"
 
