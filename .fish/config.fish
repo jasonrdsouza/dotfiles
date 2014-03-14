@@ -5,13 +5,9 @@
 
 
 #
-# Setup RVM
-#
-
-#
 # Add custom locations to $PATH
 # 
-set -g fish_user_paths $HOME/gocode/bin {$HOME}/bin
+set -g fish_user_paths $HOME/gocode/bin {$HOME}/bin /usr/local/opt/ruby/bin
 
 #
 # Golang environment variables
