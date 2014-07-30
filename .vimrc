@@ -5,8 +5,8 @@ set shell=bash
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
@@ -17,7 +17,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/syntastic'
-Bundle 'JuliaLang/julia-vim'
 
 " Tabs and spaces
 set softtabstop=2              " soft tabs = 2 spaces
@@ -50,7 +49,6 @@ set listchars=tab:▸\ ,trail:▫
 " Colors & Themeing
 set t_Co=256                   " use 256 colors
 set background=dark
-colorscheme bubblegum
 
 " Leader Key
 let mapleader = ','
@@ -79,8 +77,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jar,*.gif,*.jpg,*.png,*.svg,*.ico,*.g
 if has("gui_running")
   " GUI is running or is about to start.
   set lines=40 columns=100
-  colorscheme solarized
-  set guifont="Ubuntu Mono derivative Powerline"
 endif
 
 " md is markdown

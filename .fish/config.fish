@@ -7,7 +7,7 @@
 #
 # Add custom locations to $PATH
 # 
-set -g fish_user_paths $HOME/gocode/bin {$HOME}/bin /usr/local/opt/ruby/bin
+set -g fish_user_paths $HOME/gocode/bin {$HOME}/bin
 
 #
 # Golang environment variables
