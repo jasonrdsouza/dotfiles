@@ -19,9 +19,9 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/syntastic'
 
 " Tabs and spaces
-set softtabstop=2              " soft tabs = 2 spaces
-set tabstop=2                  " tabs = 2 spaces
-set shiftwidth=2               " round indent actions to multiples of 2
+set softtabstop=4              " soft tabs = 2 spaces
+set tabstop=4                  " tabs = 2 spaces
+set shiftwidth=4               " round indent actions to multiples of 2
 set expandtab                  " expand tabs to spaces
 
 " Searching
@@ -49,6 +49,7 @@ set listchars=tab:▸\ ,trail:▫
 " Colors & Themeing
 set t_Co=256                   " use 256 colors
 set background=dark
+colorscheme solarized
 
 " Leader Key
 let mapleader = ','
@@ -78,6 +79,7 @@ if has("gui_running")
   " GUI is running or is about to start.
   set lines=40 columns=100
 endif
+set guifont=Monaco:h14
 
 " md is markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
