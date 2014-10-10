@@ -12,6 +12,7 @@ set -g fish_user_paths $HOME/gocode/bin {$HOME}/bin /usr/local/bin
 #
 # Golang environment variables
 #
+set -g -x GOROOT (go env GOROOT)
 set -g -x GOPATH {$HOME}/gocode
 
 #
