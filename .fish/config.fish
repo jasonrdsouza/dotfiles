@@ -36,7 +36,7 @@ end
 #
 # Source Localytics config file
 #
-set -g -x LOCALYTICS_CONFIG {$HOME}/.localytics_config.fish
+set -g -x LOCALYTICS_CONFIG {$HOME}/.localytics/config.fish
 if test -f $LOCALYTICS_CONFIG
   source $LOCALYTICS_CONFIG
 end
