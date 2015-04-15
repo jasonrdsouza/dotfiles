@@ -14,6 +14,7 @@ git
 gnupg
 go
 httpie
+hub
 hugo
 jq
 librsync
@@ -25,6 +26,7 @@ pcre
 pkg-config
 popt
 rbenv
+readline
 ruby-build
 sbt
 scala
