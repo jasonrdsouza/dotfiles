@@ -52,3 +52,7 @@ ln -s ~/dotfiles/.sqliterc ~/.sqliterc
 rm ~/.tmux.conf
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
+# Bash Profile
+rm ~/.profile
+ln -s ~/dotfiles/.profile ~/.profile
+
