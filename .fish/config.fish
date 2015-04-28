@@ -21,9 +21,9 @@ set -g -x GOPATH {$HOME}/gocode
 set -g -x EDITOR "vim --noplugin"
 
 #
-# Add personal functions path
+# Setup Google Cloud SDK
 #
-#set -g fish_function_path $fish_function_path {$HOME}/<personal_functions_dir>
+set -g fish_user_paths $fish_user_paths /opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
 
 #
 # Source TA config file
