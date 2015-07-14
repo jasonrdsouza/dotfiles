@@ -10,6 +10,11 @@
 set -g fish_user_paths $HOME/gocode/bin {$HOME}/bin /usr/local/bin
 
 #
+# Enable Vi Keybindings
+#
+fish_vi_mode
+
+#
 # Golang environment variables
 #
 set -g -x GOROOT (go env GOROOT)
