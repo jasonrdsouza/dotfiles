@@ -7,7 +7,7 @@
 #
 # Add custom locations to $PATH
 # 
-set -g fish_user_paths $HOME/gocode/bin {$HOME}/bin /usr/local/bin
+set -g fish_user_paths $HOME/gocode/bin {$HOME}/bin /usr/local/bin /usr/local/sbin/
 
 #
 # Enable Vi Keybindings
