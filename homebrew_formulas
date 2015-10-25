@@ -16,6 +16,7 @@ iftop
 jq
 jsonpp
 librsync
+mercurial
 osquery
 popt
 pv
