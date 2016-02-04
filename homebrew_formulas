@@ -18,6 +18,7 @@ jsonpp
 librsync
 mercurial
 osquery
+pandoc
 popt
 pv
 python
