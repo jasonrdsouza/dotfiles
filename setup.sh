@@ -56,3 +56,7 @@ ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 rm ~/.profile
 ln -s ~/dotfiles/.profile ~/.profile
 
+# Hammerspoon
+rm -rf ~/.hammerspoon
+ln -s ~/dotfiles/.hammerspoon ~/.hammerspoon
+
