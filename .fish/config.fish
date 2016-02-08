@@ -26,6 +26,11 @@ set -g -x GOPATH {$HOME}/gocode
 set -g -x EDITOR "vim --noplugin"
 
 #
+# Use hub (superset of git)
+#
+alias git "hub"
+
+#
 # Setup Google Cloud SDK
 #
 set -g fish_user_paths $fish_user_paths /opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
