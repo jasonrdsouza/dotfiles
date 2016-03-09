@@ -10,5 +10,8 @@
   patch-svn = !sh -c 'git diff --no-prefix master `git rev-parse --abbrev-ref HEAD` | patch -p0 -N -r /tmp/patch_rejects -d $1' -
   svn-ignore = svn show-ignore
   last-change = diff HEAD^ HEAD
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
 [grep]
   lineNumber = true
