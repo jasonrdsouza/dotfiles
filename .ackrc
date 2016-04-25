@@ -15,3 +15,7 @@ cron=.m4
 
 --type-set
 markdown=.md,.markdown
+
+--type-set
+conf=.conf
+
