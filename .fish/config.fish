@@ -7,12 +7,12 @@
 #
 # Add custom locations to $PATH
 # 
-set -g fish_user_paths $HOME/gocode/bin {$HOME}/bin /usr/local/bin /usr/local/sbin/
+set -g fish_user_paths $HOME/gocode/bin {$HOME}/bin /usr/local/bin
 
 #
 # Enable Vi Keybindings
 #
-fish_vi_mode
+fish_vi_key_bindings
 
 #
 # Golang environment variables
