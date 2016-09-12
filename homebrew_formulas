@@ -17,6 +17,7 @@ jq
 jsonpp
 librsync
 mercurial
+ngrep
 osquery
 pandoc
 popt

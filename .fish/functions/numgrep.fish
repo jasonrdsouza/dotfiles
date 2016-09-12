@@ -3,7 +3,7 @@
 # - line numbers on
 # - ignore case
 #
-function ngrep --description "Search through a file"
+function numgrep --description "Search through a file"
 	command grep -n -i $argv
 end
 
