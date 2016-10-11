@@ -17,6 +17,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/syntastic'
+Bundle 'mtth/scratch.vim'
 
 " Tabs and spaces
 set softtabstop=4              " soft tabs = 2 spaces
@@ -45,6 +46,7 @@ set autoindent
 set smartindent
 set list                       " show trailing whitespace
 set listchars=tab:▸\ ,trail:▫
+set hidden                     " allow unsaved buffers to be hidden
 
 " Colors & Themeing
 set t_Co=256                   " use 256 colors
@@ -88,6 +90,10 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 vmap > >gv
 vmap < <gv
 
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
 " Easier moving around splits
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -106,3 +112,4 @@ inoremap <Right> <NOP>
 
 noremap j gj
 noremap k gk
+
