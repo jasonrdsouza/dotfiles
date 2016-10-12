@@ -36,9 +36,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " Tabs and spaces
-set softtabstop=4              " soft tabs = 2 spaces
-set tabstop=4                  " tabs = 2 spaces
-set shiftwidth=4               " round indent actions to multiples of 2
+set softtabstop=4              " soft tabs = 4 spaces
+set tabstop=4                  " tabs = 4 spaces
+set shiftwidth=4               " round indent actions to multiples of 4
 set expandtab                  " expand tabs to spaces
 
 " Searching
@@ -97,7 +97,7 @@ if has("gui_running")
   " GUI is running or is about to start.
   set lines=40 columns=100
 endif
-set guifont=Monaco:h14
+set guifont=Source\ Code\ Pro\ for\ Powerline:h14
 
 " md is markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
