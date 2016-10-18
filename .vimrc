@@ -19,6 +19,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/syntastic'
 Plugin 'mtth/scratch.vim'
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -63,6 +64,10 @@ set smartindent
 set list                       " show trailing whitespace
 set listchars=tab:▸\ ,trail:▫
 set hidden                     " allow unsaved buffers to be hidden
+
+" Quick vimrc access
+nmap <leader>ev :e $MYVIMRC<cr>
+nmap <leader>sv :so $MYVIMRC<cr>
 
 " Colors & Themeing
 set t_Co=256                   " use 256 colors
