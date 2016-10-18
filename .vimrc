@@ -65,6 +65,10 @@ set list                       " show trailing whitespace
 set listchars=tab:▸\ ,trail:▫
 set hidden                     " allow unsaved buffers to be hidden
 
+" Leader Key
+nnoremap <SPACE> <Nop>
+let mapleader = ' '
+
 " Quick vimrc access
 nmap <leader>ev :e $MYVIMRC<cr>
 nmap <leader>sv :so $MYVIMRC<cr>
@@ -73,9 +77,6 @@ nmap <leader>sv :so $MYVIMRC<cr>
 set t_Co=256                   " use 256 colors
 set background=dark
 colorscheme solarized
-
-" Leader Key
-let mapleader = ','
 
 " Airline
 set laststatus=2               " Always show statuslinee
@@ -120,6 +121,10 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
 
 " Disable arrow keys to better GROK vim
 noremap <Up> <NOP>
