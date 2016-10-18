@@ -41,6 +41,10 @@ set softtabstop=4              " soft tabs = 4 spaces
 set tabstop=4                  " tabs = 4 spaces
 set shiftwidth=4               " round indent actions to multiples of 4
 set expandtab                  " expand tabs to spaces
+set autoindent                 " Copy indent from current line
+set smartindent
+set list                       " show trailing whitespace
+set listchars=tab:▸\ ,trail:▫
 
 " Searching
 set hlsearch                   " highlight search terms
@@ -52,6 +56,7 @@ set showmatch                  " show matching parenthesis
 " Misc
 set wildmenu                   " enhanced command line completion
 set number                     " enable line numbers
+set relativenumber             " show relative line numbers
 set showmode                   " so you know what mode you are in
 set autoread                   " reload files when changed on disk
 syntax on                      " enable syntax highlighting
@@ -59,11 +64,9 @@ set clipboard=unnamed          " allow copy/pasting from system clipboard
 filetype plugin indent on      " enable file type detection
 set mouse=a                    " enable the mouse
 set encoding=utf-8
-set autoindent
-set smartindent
-set list                       " show trailing whitespace
-set listchars=tab:▸\ ,trail:▫
 set hidden                     " allow unsaved buffers to be hidden
+set history=1000               " Store 1000 previous history entries
+set cursorline                 " Highlight the current line
 
 " Leader Key
 nnoremap <SPACE> <Nop>
