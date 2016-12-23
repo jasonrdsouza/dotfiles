@@ -104,7 +104,11 @@ end)
 hs.alert.show("Config loaded")
 
 
--- Responding to events
+-- Responding to events from command line `alert` function
 hs.urlevent.bind("alert", function(eventName, params)
     hs.alert.show(params["value"])
 end)
+
+local anycomplete = require "anycomplete/anycomplete"
+anycomplete.registerDefaultBindings()
+

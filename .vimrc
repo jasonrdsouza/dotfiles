@@ -56,6 +56,7 @@ set showmatch                  " show matching parenthesis
 
 " Misc
 set wildmenu                   " enhanced command line completion
+set wildmode=list:longest      " complete matches with longest common string
 set number                     " enable line numbers
 set relativenumber             " show relative line numbers
 set showmode                   " so you know what mode you are in
