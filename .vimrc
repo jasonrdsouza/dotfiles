@@ -103,13 +103,11 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jar,*.gif,*.jpg,*.png,*.svg,*.ico,*.gz
 
-<<<<<<< HEAD
 " Syntastic
 let g:syntastic_python_checkers = ['pyflakes']
-=======
+
 " Vim Hardtime
 let g:hardtime_default_on = 1 " disallow repeated movement keypresses
->>>>>>> 2d2c57dc73bd73e3a6c0d01d635ffaf644cf4149
 
 " GVim stuff
 if has("gui_running")
