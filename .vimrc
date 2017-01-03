@@ -102,6 +102,9 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jar,*.gif,*.jpg,*.png,*.svg,*.ico,*.gz
 
+" Syntastic
+let g:syntastic_python_checkers = ['pyflakes']
+
 " GVim stuff
 if has("gui_running")
   " GUI is running or is about to start.
