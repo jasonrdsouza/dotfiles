@@ -1,8 +1,6 @@
 ack
-brew-cask
 caddy
 cloc
-duplicity
 fish
 git
 gnupg
@@ -15,17 +13,14 @@ icdiff
 iftop
 jq
 jsonpp
-librsync
 mercurial
 ngrep
 osquery
 p7zip
 pandoc
-popt
 pv
-python
+python3
 sqlite
-readline
 tig
 tree
 wget
