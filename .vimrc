@@ -20,7 +20,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/syntastic'
 Plugin 'mtth/scratch.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'takac/vim-hardtime'
+"Plugin 'takac/vim-hardtime'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
