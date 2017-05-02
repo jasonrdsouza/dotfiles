@@ -20,7 +20,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/syntastic'
 Plugin 'mtth/scratch.vim'
 Plugin 'tpope/vim-surround'
-"Plugin 'takac/vim-hardtime'
+Plugin 'takac/vim-hardtime'
+Plugin 'morhetz/gruvbox'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -81,7 +82,14 @@ nmap <leader>sv :so $MYVIMRC<cr>
 " Colors & Themeing
 set t_Co=256                   " use 256 colors
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
+
+" GVim stuff
+if has("gui_running")
+  " GUI is running or is about to start.
+  set lines=40 columns=100
+endif
+set guifont=Source\ Code\ Pro\ for\ Powerline:h14
 
 " Airline
 set laststatus=2               " Always show statuslinee
@@ -107,14 +115,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jar,*.gif,*.jpg,*.png,*.svg,*.ico,*.g
 let g:syntastic_python_checkers = ['pyflakes']
 
 " Vim Hardtime
-let g:hardtime_default_on = 1 " disallow repeated movement keypresses
-
-" GVim stuff
-if has("gui_running")
-  " GUI is running or is about to start.
-  set lines=40 columns=100
-endif
-set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+let g:hardtime_default_on = 0 " disallow repeated movement keypresses
 
 " md is markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
