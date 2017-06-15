@@ -20,8 +20,9 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/syntastic'
 Plugin 'mtth/scratch.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'takac/vim-hardtime'
 Plugin 'morhetz/gruvbox'
+" Plugin 'takac/vim-hardtime'
+Plugin 'dart-lang/dart-vim-plugin'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,9 +40,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " Tabs and spaces
-set softtabstop=4              " soft tabs = 4 spaces
-set tabstop=4                  " tabs = 4 spaces
-set shiftwidth=4               " round indent actions to multiples of 4
+set softtabstop=2              " soft tabs = 4 spaces
+set tabstop=2                  " tabs = 4 spaces
+set shiftwidth=2               " round indent actions to multiples of 4
 set expandtab                  " expand tabs to spaces
 set autoindent                 " Copy indent from current line
 set smartindent
