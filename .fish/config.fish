@@ -26,14 +26,12 @@ set -g -x GOPATH {$HOME}/go
 set -g -x EDITOR "vim --noplugin"
 
 #
-# Use hub (superset of git)
+# Source local config
 #
-alias git "hub"
-
-#
-# Setup Google Cloud SDK
-#
-set -g fish_user_paths $fish_user_paths /opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
+set -g -x LOCAL_CONFIG {$HOME}/local.fish
+if test -f $LOCAL_CONFIG
+  source $LOCAL_CONFIG
+end
 
 #
 # Source TA config file
