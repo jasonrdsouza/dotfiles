@@ -89,6 +89,7 @@ colorscheme gruvbox
 if has("gui_running")
   " GUI is running or is about to start.
   set lines=40 columns=100
+  set transparency=15
 endif
 set guifont=Source\ Code\ Pro\ for\ Powerline:h14
 
