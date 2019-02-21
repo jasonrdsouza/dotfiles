@@ -2,6 +2,7 @@ ack
 caddy
 cloc
 fish
+fzf
 git
 gnupg
 go
@@ -13,6 +14,7 @@ icdiff
 iftop
 jq
 jsonpp
+kakoune
 mercurial
 ngrep
 osquery
