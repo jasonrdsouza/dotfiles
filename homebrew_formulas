@@ -24,6 +24,7 @@ pv
 python3
 sqlite
 tig
+tmux
 tree
 wget
 youtube-dl
