@@ -20,6 +20,10 @@ ln -s ~/dotfiles/.bashrc ~/.bashrc
 rm ~/.vimrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 
+# Kakoune
+rm ~/.config/kak/kakrc
+ln -s ~/dotfiles/kakrc ~/.config/kak/kakrc
+
 # Pry
 rm ~/.pryrc
 ln -s ~/dotfiles/.pryrc ~/.pryrc
