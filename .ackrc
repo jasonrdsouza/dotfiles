@@ -1,4 +1,8 @@
+# Ignore case by default
 --ignore-case
+
+# Always print line numbers
+--with-filename
 
 --type-set
 log=.log,.logfile
