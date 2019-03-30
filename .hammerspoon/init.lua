@@ -108,7 +108,3 @@ hs.alert.show("Config loaded")
 hs.urlevent.bind("alert", function(eventName, params)
     hs.alert.show(params["value"])
 end)
-
-local anycomplete = require "anycomplete/anycomplete"
-anycomplete.registerDefaultBindings()
-
