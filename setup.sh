@@ -35,6 +35,8 @@ ln -s ~/dotfiles/.irbrc ~/.irbrc
 # Git
 rm ~/.gitconfig
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+rm ~/.gitignore_global
+ln -s ~/dotfiles/.gitignore ~/.gitignore_global
 
 # Ack
 rm ~/.ackrc
