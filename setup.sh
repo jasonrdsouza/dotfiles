@@ -7,8 +7,6 @@
 # Fish
 rm -rf ~/.config/fish/functions
 ln -s ~/dotfiles/.fish/functions ~/.config/fish/functions
-rm -rf ~/.config/fish/completions
-ln -s ~/dotfiles/.fish/completions ~/.config/fish/completions
 rm ~/.config/fish/config.fish
 ln -s ~/dotfiles/.fish/config.fish ~/.config/fish/config.fish
 
@@ -35,6 +33,8 @@ ln -s ~/dotfiles/.irbrc ~/.irbrc
 # Git
 rm ~/.gitconfig
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+rm ~/.gitignore_global
+ln -s ~/dotfiles/.gitignore ~/.gitignore_global
 
 # Ack
 rm ~/.ackrc
