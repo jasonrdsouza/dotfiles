@@ -14,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Other plugins
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
@@ -21,7 +22,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'mtth/scratch.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'morhetz/gruvbox'
-" Plugin 'takac/vim-hardtime'
+Plugin 'takac/vim-hardtime'
 Plugin 'dart-lang/dart-vim-plugin'
 
 " All of your Plugins must be added before the following line
@@ -83,21 +84,23 @@ nmap <leader>sv :so $MYVIMRC<cr>
 " Colors & Themeing
 set t_Co=256                   " use 256 colors
 set background=dark
-colorscheme gruvbox
+colorscheme solarized
 
 " GVim stuff
 if has("gui_running")
   " GUI is running or is about to start.
   set lines=40 columns=100
-  set transparency=15
-  set guifont=Source\ Code\ Pro\ for\ Powerline
+  set transparency=0
+  set guifont=mononoki-Regular\ Nerd\ Font\ Complete\ Mono:h18
 endif
 
 " Airline
 set laststatus=2               " Always show statuslinee
 set noshowmode                 " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 let g:airline_powerline_fonts=1
-let g:airline_theme='dark'
+let g:airline_theme='solarized'
+let g:airline_left_sep = "\uE0BC"
+let g:airline_right_sep = "\uE0BA"
 
 " NERDTree
 nmap <leader>d :NERDTreeToggle<CR>
