@@ -114,6 +114,7 @@ nmap <leader>t :CtrlP<CR>
 let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_max_files = 0
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jar,*.gif,*.jpg,*.png,*.svg,*.ico,*.gz
 
 " Syntastic
