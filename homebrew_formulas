@@ -23,6 +23,7 @@ pandoc
 pv
 python3
 sqlite
+the_silver_searcher
 tig
 tmux
 tree
