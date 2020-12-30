@@ -57,6 +57,11 @@ set ignorecase                 " case insensitive searching
 set smartcase                  " search upper/ all cases intelligently
 set showmatch                  " show matching parenthesis
 
+" Undo Tree
+set undofile
+set undodir=~/.vim/undo
+set undolevels=1000
+
 " Misc
 set wildmenu                   " enhanced command line completion
 set wildmode=list:longest      " complete matches with longest common string
