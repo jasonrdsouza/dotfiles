@@ -1,14 +1,11 @@
 atom
-boostnote
 dropbox
 flux
 google-chrome
 google-cloud-sdk
 google-drive
-google-featured-photos
 hammerspoon
 iterm2
-macdown
 macvim
 postman
 qlcolorcode
@@ -19,4 +16,5 @@ quicklook-csv
 quicklook-json
 sloth
 transmission
+visual-studio-code
 vlc
