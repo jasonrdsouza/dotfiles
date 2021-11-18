@@ -26,6 +26,13 @@ set -g -x GOPATH {$HOME}/go
 set -g -x EDITOR "vim --noplugin"
 
 #
+# Use Bat instead of Cat if available
+#
+if type -q bat
+  alias cat "bat --paging=never"
+end
+
+#
 # Source local config
 #
 set -g -x LOCAL_CONFIG {$HOME}/local.fish
