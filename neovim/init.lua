@@ -19,6 +19,10 @@ require "paq" {
   "tpope/vim-surround";
   "EdenEast/nightfox.nvim"; -- Nightfox theme
   "nvim-treesitter/nvim-treesitter"; -- Better syntax highlighting
+
+  "nvim-lua/plenary.nvim"; -- dependency of telescope
+  "nvim-telescope/telescope-fzy-native.nvim"; -- native fuzzy finder for Telescope
+  "nvim-telescope/telescope.nvim"; -- Extensible fuzzy finder
 }
 
 -- Use spaces instead of tabs
@@ -113,4 +117,46 @@ map(NORMAL_MODE, LEADER .. "ev", "<cmd>e $MYVIMRC<CR>")
 
 -- Select all of a file
 map(NORMAL_MODE, LEADER .. "sa", "ggVG<c-$>")
+
+-- Treesitter (syntax highlighting) configuration
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
+  ignore_install = { "javascript" }, -- List of parsers to ignore installing
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+    disable = { "c", "rust" },  -- list of language that will be disabled
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
+
+-- Telescope configuration
+require("telescope").load_extension("fzy_native")
+map(NORMAL_MODE, LEADER .. "t", '<cmd>lua require("telescope.builtin").find_files()<cr>')
+map(NORMAL_MODE, LEADER .. "b", '<cmd>lua require("telescope.builtin").buffers()<cr>')
+map(NORMAL_MODE, LEADER .. "f", '<cmd>lua require("telescope.builtin").live_grep()<cr>')
+require("telescope").setup({
+  defaults = {
+    winblend = 20,
+    sorting_strategy = "descending",
+    layout_strategy = "flex",
+    layout_config = {
+      flex = {
+        flip_columns = 140,
+      },
+      vertical = {
+        preview_cutoff = 40,
+        prompt_position = "bottom",
+      },
+      horizontal = {
+        width = 0.9,
+        height = 0.8,
+      },
+    },
+  },
+})
 
