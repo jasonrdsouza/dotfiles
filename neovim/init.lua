@@ -20,6 +20,7 @@ require "paq" {
   "EdenEast/nightfox.nvim";                   -- Nightfox theme
   "nvim-lualine/lualine.nvim";                -- Statusline
   "kyazdani42/nvim-tree.lua";                 -- File tree viewer
+  "kyazdani42/nvim-web-devicons";             -- Prettier icons
   "nvim-treesitter/nvim-treesitter";          -- Better syntax highlighting
 
   "nvim-lua/plenary.nvim";                    -- Lua helper functions (dependency of telescope)
@@ -119,10 +120,10 @@ nightfox.load()
 -- Lualine configuration
 require'lualine'.setup {
   options = {
-    icons_enabled = false,
+    icons_enabled = true,
     theme = 'auto',
     component_separators = { left = ' ', right = ' '},
-    section_separators = { left = '|', right = '|'},
+    section_separators = { left = "│", right = "│" },
     disabled_filetypes = {},
     always_divide_middle = true,
   },
