@@ -14,15 +14,17 @@ end
 
 -- Plugins
 require "paq" {
-  "savq/paq-nvim"; -- let Paq manage itself
+  "savq/paq-nvim";                            -- let Paq manage itself
 
-  "tpope/vim-surround";
-  "EdenEast/nightfox.nvim"; -- Nightfox theme
-  "nvim-treesitter/nvim-treesitter"; -- Better syntax highlighting
+  "tpope/vim-surround";                       -- Vim grammer extension for surrounding characters
+  "EdenEast/nightfox.nvim";                   -- Nightfox theme
+  "nvim-lualine/lualine.nvim";                -- Statusline
+  "kyazdani42/nvim-tree.lua";                 -- File tree viewer
+  "nvim-treesitter/nvim-treesitter";          -- Better syntax highlighting
 
-  "nvim-lua/plenary.nvim"; -- dependency of telescope
+  "nvim-lua/plenary.nvim";                    -- Lua helper functions (dependency of telescope)
   "nvim-telescope/telescope-fzy-native.nvim"; -- native fuzzy finder for Telescope
-  "nvim-telescope/telescope.nvim"; -- Extensible fuzzy finder
+  "nvim-telescope/telescope.nvim";            -- Extensible fuzzy finder
 }
 
 -- Use spaces instead of tabs
@@ -81,6 +83,24 @@ opt.showmode = true                 -- Show what mode you are in
 opt.autoread = true -- Reload files that have changed on disk
 opt.clipboard = "unnamedplus" -- Allow copy/ pasting from system clipboard
 
+
+-- Custom key mappings
+local function map(mode, lhs, rhs, opts)
+  local options = { noremap = true }
+  if opts then
+    options = vim.tbl_extend("force", options, opts)
+  end
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
+local NORMAL_MODE = "n"
+local VISUAL_MODE = "v"
+local INSERT_MODE = "i"
+local LEADER = "<leader>"
+
+map(NORMAL_MODE, LEADER .. "sv", ":luafile %<CR>")      -- Source nvimrc file
+map(NORMAL_MODE, LEADER .. "ev", "<cmd>e $MYVIMRC<CR>") -- Edit nvimrc file
+map(NORMAL_MODE, LEADER .. "sa", "ggVG<c-$>")           -- Select all of a file
+
 -- Theme setup
 local nightfox = require("nightfox")
 nightfox.setup({
@@ -96,27 +116,44 @@ nightfox.setup({
 })
 nightfox.load()
 
--- Custom key mappings
-local function map(mode, lhs, rhs, opts)
-  local options = { noremap = true }
-  if opts then
-    options = vim.tbl_extend("force", options, opts)
-  end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
-local NORMAL_MODE = "n"
-local VISUAL_MODE = "v"
-local INSERT_MODE = "i"
-local LEADER = "<leader>"
+-- Lualine configuration
+require'lualine'.setup {
+  options = {
+    icons_enabled = false,
+    theme = 'auto',
+    component_separators = { left = ' ', right = ' '},
+    section_separators = { left = '|', right = '|'},
+    disabled_filetypes = {},
+    always_divide_middle = true,
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff',
+                  {'diagnostics', sources={'nvim_lsp', 'coc'}}},
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  extensions = {}
+}
 
--- Source nvimrc file
-map(NORMAL_MODE, LEADER .. "sv", ":luafile %<CR>")
+-- Nvim Tree configuration
+g.nvim_tree_gitignore = 1
+g.nvim_tree_highlight_opened_files = 1
+g.nvim_tree_add_trailing = 1
 
--- Edit nvimrc file
-map(NORMAL_MODE, LEADER .. "ev", "<cmd>e $MYVIMRC<CR>")
-
--- Select all of a file
-map(NORMAL_MODE, LEADER .. "sa", "ggVG<c-$>")
+require'nvim-tree'.setup()
+map(NORMAL_MODE, LEADER .. "d", ":NvimTreeToggle<CR>", { silent = true })
 
 -- Treesitter (syntax highlighting) configuration
 require'nvim-treesitter.configs'.setup {
@@ -141,7 +178,6 @@ map(NORMAL_MODE, LEADER .. "b", '<cmd>lua require("telescope.builtin").buffers()
 map(NORMAL_MODE, LEADER .. "f", '<cmd>lua require("telescope.builtin").live_grep()<cr>')
 require("telescope").setup({
   defaults = {
-    winblend = 20,
     sorting_strategy = "descending",
     layout_strategy = "flex",
     layout_config = {
