@@ -6,6 +6,10 @@ local opt = vim.opt -- to set vim options
 -- Map leader to space
 g.mapleader = " "
 
+-- Set shell to bash to avoid performance issues
+-- so far, this has only happened to me with the nvim-tree plugin
+opt.shell = "/bin/bash"
+
 -- Bootstrap package manager
 local install_path = fn.stdpath("data") .. "/site/pack/paqs/start/paq-nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -21,6 +25,7 @@ require "paq" {
   "nvim-lualine/lualine.nvim";                -- Statusline
   "kyazdani42/nvim-tree.lua";                 -- File tree viewer
   "kyazdani42/nvim-web-devicons";             -- Prettier icons
+  "phaazon/hop.nvim";                         -- Easily hop around a file
   "nvim-treesitter/nvim-treesitter";          -- Better syntax highlighting
 
   "nvim-lua/plenary.nvim";                    -- Lua helper functions (dependency of telescope)
@@ -78,12 +83,10 @@ opt.hidden = true -- Enable background buffers
 opt.backspace = {"indent", "eol", "start"}
 opt.joinspaces = false -- No double spaces with join
 opt.encoding = "utf-8" -- Set default encoding to UTF-8
-opt.splitbelow = true -- Put new windows below current
-opt.splitright = true -- Put new windows right of current
 opt.showmode = true                 -- Show what mode you are in
 opt.autoread = true -- Reload files that have changed on disk
 opt.clipboard = "unnamedplus" -- Allow copy/ pasting from system clipboard
-
+opt.mouse = "a" -- enable the mouse
 
 -- Custom key mappings
 local function map(mode, lhs, rhs, opts)
@@ -98,9 +101,18 @@ local VISUAL_MODE = "v"
 local INSERT_MODE = "i"
 local LEADER = "<leader>"
 
-map(NORMAL_MODE, LEADER .. "sv", ":luafile %<CR>")      -- Source nvimrc file
-map(NORMAL_MODE, LEADER .. "ev", "<cmd>e $MYVIMRC<CR>") -- Edit nvimrc file
-map(NORMAL_MODE, LEADER .. "sa", "ggVG<c-$>")           -- Select all of a file
+map(NORMAL_MODE, LEADER .. "sv", ":luafile %<CR>")            -- Source nvimrc file
+map(NORMAL_MODE, LEADER .. "ev", "<cmd>e $MYVIMRC<CR>")       -- Edit nvimrc file
+map(NORMAL_MODE, LEADER .. "sa", "ggVG<c-$>")                 -- Select all of a file
+map(NORMAL_MODE, "<esc>", ":noh<cr><esc>", { silent = true }) -- After searching, pressing escape stops the highlight
+
+-- Easier Split Management
+opt.splitbelow = true -- Put new windows below current
+opt.splitright = true -- Put new windows right of current
+map(NORMAL_MODE, LEADER .. "j", "<C-W><C-J>", { silent = true })
+map(NORMAL_MODE, LEADER .. "k", "<C-W><C-K>", { silent = true })
+map(NORMAL_MODE, LEADER .. "l", "<C-W><C-L>", { silent = true })
+map(NORMAL_MODE, LEADER .. "h", "<C-W><C-H>", { silent = true })
 
 -- Theme setup
 local nightfox = require("nightfox")
@@ -155,6 +167,12 @@ g.nvim_tree_add_trailing = 1
 
 require'nvim-tree'.setup()
 map(NORMAL_MODE, LEADER .. "d", ":NvimTreeToggle<CR>", { silent = true })
+
+-- Hop configuration
+require'hop'.setup{
+  jump_on_sole_occurrence = true
+}
+map(NORMAL_MODE, LEADER .. " ", ":HopChar2<CR>")
 
 -- Treesitter (syntax highlighting) configuration
 require'nvim-treesitter.configs'.setup {
