@@ -18,6 +18,10 @@ ln -s ~/dotfiles/.bashrc ~/.bashrc
 rm ~/.vimrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 
+# Neovim
+rm ~/.config/nvim/init.lua
+ln -s ~/dotfiles/neovim/init.lua ~/.config/nvim/init.lua
+
 # Kakoune
 rm ~/.config/kak/kakrc
 ln -s ~/dotfiles/kakrc ~/.config/kak/kakrc
