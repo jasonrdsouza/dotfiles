@@ -5,7 +5,7 @@
 
 
 # Add custom locations to $PATH
-set -g fish_user_paths $HOME/go/bin {$HOME}/bin /usr/local/bin (/opt/homebrew/bin/brew --prefix)/bin
+set -g fish_user_paths $HOME/go/bin {$HOME}/bin /usr/local/bin (brew --prefix)/bin
 
 # Enable Vi Keybindings
 fish_vi_key_bindings
