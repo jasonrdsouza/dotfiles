@@ -165,7 +165,9 @@ g.nvim_tree_gitignore = 1
 g.nvim_tree_highlight_opened_files = 1
 g.nvim_tree_add_trailing = 1
 
-require'nvim-tree'.setup()
+require'nvim-tree'.setup {
+  update_cwd = true
+}
 map(NORMAL_MODE, LEADER .. "d", ":NvimTreeToggle<CR>", { silent = true })
 
 -- Hop configuration
