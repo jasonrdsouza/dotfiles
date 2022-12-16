@@ -52,7 +52,7 @@ if test -f $LOCALYTICS_CONFIG
 end
 
 # Source Amazon config file
-set -g -x AMAZON_CONFIG {$HOME}/.amazon/config.fish
+set -g -x AMAZON_CONFIG {$HOME}/notebook/files/dotfiles/config.fish
 if test -f $AMAZON_CONFIG
   source $AMAZON_CONFIG
 end

@@ -18,6 +18,7 @@ iftop
 jq
 jsonpp
 kakoune
+lnav
 mercurial
 ngrep
 osquery
