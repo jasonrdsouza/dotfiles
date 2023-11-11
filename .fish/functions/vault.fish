@@ -8,7 +8,7 @@ function vault --description "Manipulate vault files"
     age --decrypt $argv[2] | tar --extract --gzip -
   case 'lock'
     set baseName (string trim --chars='/' $argv[2])
-    tar --create --compress $argv[2] | age --encrypt --passphrase > $baseName.tar.gz.age
+    tar --create --gzip $argv[2] | age --encrypt --passphrase > $baseName.tar.gz.age
   case '*'
     echo "Unknown command"
   end
