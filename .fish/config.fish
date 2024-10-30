@@ -25,7 +25,7 @@ end
 
 # Use Bat instead of Cat if available
 if type -q bat
-  alias cat "bat --paging=never"
+  alias cat "bat --style=plain --paging=never"
 end
 
 # Interactive shell history search
