@@ -13,6 +13,7 @@ fish_vi_key_bindings
 # Golang environment variables
 set -g -x GOROOT (go env GOROOT)
 set -g -x GOPATH {$HOME}/go
+set -g -x GOBIN {$HOME}/go/bin
 
 # Set EDITOR variable to be vanilla nvim
 set -g -x EDITOR "nvim --noplugin"
