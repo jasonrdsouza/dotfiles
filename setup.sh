@@ -11,6 +11,10 @@ ln -s ~/dotfiles/.fish/functions ~/.config/fish/functions
 rm ~/.config/fish/config.fish
 ln -s ~/dotfiles/.fish/config.fish ~/.config/fish/config.fish
 
+# Alacritty
+rm -rf ~/.config/alacritty
+ln -s ~/dotfiles/alacritty ~/.config/alacritty
+
 # Vim
 rm ~/.vimrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
