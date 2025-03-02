@@ -5,6 +5,7 @@
 
 
 # Fish
+mkdir -p ~/.config/fish
 rm -rf ~/.config/fish/functions
 ln -s ~/dotfiles/.fish/functions ~/.config/fish/functions
 rm ~/.config/fish/config.fish
@@ -15,10 +16,12 @@ rm ~/.vimrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 
 # Neovim
+mkdir -p ~/.config/nvim
 rm ~/.config/nvim/init.lua
 ln -s ~/dotfiles/neovim/init.lua ~/.config/nvim/init.lua
 
 # Kakoune
+mkdir -p ~/.config/kak
 rm ~/.config/kak/kakrc
 ln -s ~/dotfiles/kakrc ~/.config/kak/kakrc
 

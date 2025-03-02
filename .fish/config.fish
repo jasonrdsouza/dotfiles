@@ -5,13 +5,13 @@
 
 
 # Add custom locations to $PATH
-set -g fish_user_paths $HOME/go/bin {$HOME}/bin /usr/local/bin /opt/homebrew/bin
+set -g fish_user_paths {$HOME}/bin /usr/local/bin /opt/homebrew/bin
 
 # Enable Vi Keybindings
 fish_vi_key_bindings
 
 # Set EDITOR variable to be vanilla nvim
-set -g -x EDITOR "vim --noplugin"
+set -g -x EDITOR "vim --clean"
 
 # Quality of Life Aliases
 alias ls "ls --color=auto"
@@ -37,9 +37,11 @@ if type -q fzf
 end
 
 # Golang environment variables
-set -g -x GOROOT (go env GOROOT)
-set -g -x GOPATH {$HOME}/go
-set -g -x GOBIN {$HOME}/go/bin
+if type -q go
+  set -g -x GOROOT (go env GOROOT)
+  set -g -x GOPATH {$HOME}/go
+  set -g -x GOBIN {$HOME}/go/bin
+end
 
 # Source local config
 set -g -x LOCAL_CONFIG {$HOME}/local.fish
