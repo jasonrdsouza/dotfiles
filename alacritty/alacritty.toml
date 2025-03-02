@@ -41,3 +41,8 @@ style = "Medium Italic"
 family = "JetBrainsMono Nerd Font"
 style = "Medium"
 
+[keyboard]
+bindings = [
+  { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
+]
+
