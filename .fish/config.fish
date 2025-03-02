@@ -10,15 +10,17 @@ set -g fish_user_paths $HOME/go/bin {$HOME}/bin /usr/local/bin /opt/homebrew/bin
 # Enable Vi Keybindings
 fish_vi_key_bindings
 
-# Golang environment variables
-set -g -x GOROOT (go env GOROOT)
-set -g -x GOPATH {$HOME}/go
-set -g -x GOBIN {$HOME}/go/bin
-
 # Set EDITOR variable to be vanilla nvim
-set -g -x EDITOR "nvim --noplugin"
+set -g -x EDITOR "vim --noplugin"
 
-# Alias vim to nvim
+# Quality of Life Aliases
+alias ls "ls --color=auto"
+alias ll "ls -lahF"
+alias la "ls -A"
+alias grep "grep -i --color=auto"
+alias less "less -N -M"
+
+# Alias vim to nvim if present
 if type -q nvim
   alias vim "nvim"
   alias view "nvim -R"
@@ -33,6 +35,11 @@ end
 if type -q fzf
   alias historical "history | fzf --header-lines=1"
 end
+
+# Golang environment variables
+set -g -x GOROOT (go env GOROOT)
+set -g -x GOPATH {$HOME}/go
+set -g -x GOBIN {$HOME}/go/bin
 
 # Source local config
 set -g -x LOCAL_CONFIG {$HOME}/local.fish

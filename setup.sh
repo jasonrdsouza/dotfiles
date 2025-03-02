@@ -10,10 +10,6 @@ ln -s ~/dotfiles/.fish/functions ~/.config/fish/functions
 rm ~/.config/fish/config.fish
 ln -s ~/dotfiles/.fish/config.fish ~/.config/fish/config.fish
 
-# Bash
-rm ~/.bashrc
-ln -s ~/dotfiles/.bashrc ~/.bashrc
-
 # Vim
 rm ~/.vimrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
@@ -59,10 +55,6 @@ ln -s ~/dotfiles/.sqliterc ~/.sqliterc
 # Tmux
 rm ~/.tmux.conf
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-
-# Bash Profile
-rm ~/.profile
-ln -s ~/dotfiles/.profile ~/.profile
 
 # Hammerspoon
 rm -rf ~/.hammerspoon
