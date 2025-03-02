@@ -20,12 +20,14 @@ jsonpp
 kakoune
 lnav
 mercurial
+neovim
 ngrep
 osquery
 p7zip
 pandoc
 pv
 python3
+ripgrep
 sqlite
 the_silver_searcher
 tig

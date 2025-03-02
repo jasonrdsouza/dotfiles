@@ -1,7 +1,8 @@
-atom
+alacritty
 disk-inventory-x
 dropbox
-flux
+font-jetbrains-mono-nerd-font
+font-ubuntu-mono-nerd-font
 google-chrome
 google-cloud-sdk
 google-drive
@@ -15,7 +16,7 @@ qlprettypatch
 qlstephen
 quicklook-csv
 quicklook-json
-sloth
+todoist
 transmission
 visual-studio-code
 vlc

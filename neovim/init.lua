@@ -21,7 +21,7 @@ require "paq" {
   "savq/paq-nvim";                            -- let Paq manage itself
 
   "tpope/vim-surround";                       -- Vim grammer extension for surrounding characters
-  "EdenEast/nightfox.nvim";                   -- Nightfox theme
+  "catppuccin/nvim";                          -- Catppuccin theme
   "nvim-lualine/lualine.nvim";                -- Statusline
   "kyazdani42/nvim-tree.lua";                 -- File tree viewer
   "kyazdani42/nvim-web-devicons";             -- Prettier icons
@@ -115,19 +115,12 @@ map(NORMAL_MODE, LEADER .. "l", "<C-W><C-L>", { silent = true })
 map(NORMAL_MODE, LEADER .. "h", "<C-W><C-H>", { silent = true })
 
 -- Theme setup
-local nightfox = require("nightfox")
-nightfox.setup({
-  fox = "nordfox",
-  alt_nc = true,
-  visual = true,
-  search = true,
-  styles = {
-    comments = "italic",
-    keywords = "bold",
-    functions = "italic,bold",
-  },
+local theme = require("catppuccin")
+theme.setup({
+  flavour = "frappe",
+  transparent_background = true,
 })
-nightfox.load()
+vim.cmd.colorscheme "catppuccin"
 
 -- Lualine configuration
 require'lualine'.setup {
