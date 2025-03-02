@@ -7,9 +7,9 @@
 # Fish
 mkdir -p ~/.config/fish
 rm -rf ~/.config/fish/functions
-ln -s ~/dotfiles/.fish/functions ~/.config/fish/functions
+ln -s ~/dotfiles/fish/functions ~/.config/fish/functions
 rm ~/.config/fish/config.fish
-ln -s ~/dotfiles/.fish/config.fish ~/.config/fish/config.fish
+ln -s ~/dotfiles/fish/config.fish ~/.config/fish/config.fish
 
 # Alacritty
 rm -rf ~/.config/alacritty
@@ -17,7 +17,7 @@ ln -s ~/dotfiles/alacritty ~/.config/alacritty
 
 # Vim
 rm ~/.vimrc
-ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/vimrc ~/.vimrc
 
 # Neovim
 mkdir -p ~/.config/nvim
@@ -31,25 +31,21 @@ ln -s ~/dotfiles/kakrc ~/.config/kak/kakrc
 
 # Pry
 rm ~/.pryrc
-ln -s ~/dotfiles/.pryrc ~/.pryrc
+ln -s ~/dotfiles/pryrc ~/.pryrc
 
 # IRB
 rm ~/.irbrc
-ln -s ~/dotfiles/.irbrc ~/.irbrc
+ln -s ~/dotfiles/irbrc ~/.irbrc
 
 # Git
 rm ~/.gitconfig
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/dotfiles/gitconfig ~/.gitconfig
 rm ~/.gitignore_global
-ln -s ~/dotfiles/.gitignore ~/.gitignore_global
+ln -s ~/dotfiles/gitignore ~/.gitignore_global
 
 # Ack
 rm ~/.ackrc
-ln -s ~/dotfiles/.ackrc ~/.ackrc
-
-# Sqsh
-rm ~/.sqshrc
-ln -s ~/dotfiles/.sqshrc ~/.sqshrc
+ln -s ~/dotfiles/ackrc ~/.ackrc
 
 # Redshift
 rm ~/.config/redshift.conf
@@ -57,13 +53,13 @@ ln -s ~/dotfiles/redshift.conf ~/.config/redshift.conf
 
 # Sqlite
 rm ~/.sqliterc
-ln -s ~/dotfiles/.sqliterc ~/.sqliterc
+ln -s ~/dotfiles/sqliterc ~/.sqliterc
 
 # Tmux
 rm ~/.tmux.conf
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 
 # Hammerspoon
 rm -rf ~/.hammerspoon
-ln -s ~/dotfiles/.hammerspoon ~/.hammerspoon
+ln -s ~/dotfiles/hammerspoon ~/.hammerspoon
 
