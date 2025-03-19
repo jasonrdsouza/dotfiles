@@ -5,7 +5,7 @@
 
 
 # Add custom locations to $PATH
-set -g fish_user_paths {$HOME}/bin /usr/local/bin /opt/homebrew/bin
+set -g fish_user_paths {$HOME}/.local/bin /usr/local/bin /opt/homebrew/bin
 
 # Enable Vi Keybindings
 fish_vi_key_bindings
@@ -65,5 +65,11 @@ end
 set -g -x AMAZON_CONFIG {$HOME}/notebook/files/dotfiles/config.fish
 if test -f $AMAZON_CONFIG
   source $AMAZON_CONFIG
+end
+
+# Source Pedestal config file
+set -g -x PEDESTAL_CONFIG {$HOME}/Documents/scripts/config.fish
+if test -f $PEDESTAL_CONFIG
+  source $PEDESTAL_CONFIG
 end
 
