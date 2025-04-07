@@ -32,3 +32,5 @@
   cmd = difft "$LOCAL" "$REMOTE"
 [pager]
   difftool = true
+[init]
+	defaultBranch = main
