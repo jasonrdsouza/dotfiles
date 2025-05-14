@@ -160,3 +160,10 @@ hs.alert.show("Config loaded")
 hs.urlevent.bind("alert", function(eventName, params)
     hs.alert.show(params["value"])
 end)
+
+
+-- New Alacritty window
+hs.hotkey.bind({"command", "shift"}, "T", function()
+    hs.execute('open /Applications/Alacritty.app')
+end)
+
