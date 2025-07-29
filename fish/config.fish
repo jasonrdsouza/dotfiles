@@ -49,7 +49,7 @@ if test -f $LOCAL_CONFIG
   source $LOCAL_CONFIG
 end
 
-# Source TA config file
+# Source TripAdvisor config file
 set -g -x TRIP_SCRIPTS {$HOME}/tr-users/jdsouza
 if test -f {$TRIP_SCRIPTS}/fish/trip_config.fish
   source {$TRIP_SCRIPTS}/fish/trip_config.fish
