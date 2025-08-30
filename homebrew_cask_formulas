@@ -6,9 +6,6 @@ google-chrome
 google-cloud-sdk
 google-drive
 hammerspoon
-iterm2
-macvim
-postman
 qlcolorcode
 qlmarkdown
 qlprettypatch
@@ -17,5 +14,4 @@ quicklook-csv
 quicklook-json
 todoist
 transmission
-visual-studio-code
 vlc
