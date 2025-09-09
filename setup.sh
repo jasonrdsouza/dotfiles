@@ -15,10 +15,6 @@ ln -s ~/dotfiles/fish/config.fish ~/.config/fish/config.fish
 rm -rf ~/.config/alacritty
 ln -s ~/dotfiles/alacritty ~/.config/alacritty
 
-# Vim
-rm ~/.vimrc
-ln -s ~/dotfiles/vimrc ~/.vimrc
-
 # Neovim
 mkdir -p ~/.config/nvim
 rm ~/.config/nvim/init.lua
