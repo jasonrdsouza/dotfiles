@@ -24,6 +24,11 @@ mkdir -p ~/.config/nvim
 rm ~/.config/nvim/init.lua
 ln -s ~/dotfiles/neovim/init.lua ~/.config/nvim/init.lua
 
+# Zed
+mkdir -p ~/.config/zed
+rm ~/.config/zed/settings.json
+ln -s ~/dotfiles/zed/settings.json ~/.config/zed/settings.json
+
 # Kakoune
 mkdir -p ~/.config/kak
 rm ~/.config/kak/kakrc
