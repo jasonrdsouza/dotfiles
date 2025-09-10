@@ -30,6 +30,10 @@ mkdir -p ~/.config/kak
 rm ~/.config/kak/kakrc
 ln -s ~/dotfiles/kakrc ~/.config/kak/kakrc
 
+# OpenCode
+rm -rf ~/.config/opencode
+ln -s ~/dotfiles/opencode ~/.config/opencode
+
 # Pry
 rm ~/.pryrc
 ln -s ~/dotfiles/pryrc ~/.pryrc
