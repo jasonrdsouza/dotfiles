@@ -36,6 +36,11 @@ if type -q fzf
   alias historical "history | fzf --header-lines=1"
 end
 
+# Ripgrep config
+if type -q rg
+  set -g -x RIPGREP_CONFIG_PATH {$HOME}/dotfiles/ripgreprc
+end
+
 # Golang environment variables
 if type -q go
   set -g -x GOROOT (go env GOROOT)
