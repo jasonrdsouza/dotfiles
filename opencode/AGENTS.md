@@ -18,3 +18,11 @@ Do not simply agree with proposed approaches. If you identify problems or better
 
 Honest, critical feedback is more valuable than agreement.
 
+## Git Workflow
+
+Never commit or push code automatically. Instead:
+- Alert when code changes are ready for review
+- Provide a summary of changes made
+- Wait for explicit approval before any git operations
+
+This allows for manual validation before code is committed or pushed.
