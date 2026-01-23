@@ -26,3 +26,11 @@ Never commit or push code automatically. Instead:
 - Wait for explicit approval before any git operations
 
 This allows for manual validation before code is committed or pushed.
+
+## Plans and Documentation
+
+When creating plans, specs, brainstorming documents, or other working markdown files:
+- Write them to the `.plans/` folder unless otherwise specified
+- This folder is gitignored by default, keeping work-in-progress documents out of version control
+- Only create documentation in the main project directories when explicitly requested
+
