@@ -34,3 +34,13 @@ When creating plans, specs, brainstorming documents, or other working markdown f
 - This folder is gitignored by default, keeping work-in-progress documents out of version control
 - Only create documentation in the main project directories when explicitly requested
 
+## Skill Discovery
+
+When you notice a repeatable pattern or workflow emerging, suggest creating a new skill for it. Good candidates for skills:
+- Tasks you've done multiple times with similar steps
+- Workflows that require specific domain knowledge or conventions
+- Processes that benefit from a consistent checklist approach
+- Code review patterns for specific concerns (security, performance, accessibility)
+
+When suggesting a skill, briefly describe what it would do and why it's worth codifying.
+
