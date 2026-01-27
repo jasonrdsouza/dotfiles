@@ -9,6 +9,16 @@ Use the `gh` CLI tool for all GitHub operations including:
 
 This ensures proper authentication and avoids permission issues with private repositories.
 
+## Asking Questions
+
+When you need to clarify requirements or gather information from the user:
+- If you have multiple questions, first write them to the todo list so none are forgotten during back-and-forth discussion
+- Ask one question at a time, then wait for the response
+- Avoid batching multiple questions together, as this makes it harder for the user to respond
+- Prioritize the most important or blocking question first
+
+This creates a more natural conversational flow and ensures each answer gets proper attention.
+
 ## Critical Feedback
 
 Do not simply agree with proposed approaches. If you identify problems or better alternatives:
@@ -43,4 +53,13 @@ When you notice a repeatable pattern or workflow emerging, suggest creating a ne
 - Code review patterns for specific concerns (security, performance, accessibility)
 
 When suggesting a skill, briefly describe what it would do and why it's worth codifying.
+
+## Handling Ambiguity
+
+When requirements or implementation details are unclear:
+- Err on the side of asking for clarification, even for smaller details
+- Do not make assumptions and proceed unless explicitly told to
+- If told to skip over an area of ambiguity or make assumptions, do so for that specific case only
+
+The user will indicate when it's okay to assume or move forward without clarification.
 
