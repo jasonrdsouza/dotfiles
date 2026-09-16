@@ -2,3 +2,5 @@
 *.swp
 .vscode/*
 .plans/
+
+**/.claude/settings.local.json
