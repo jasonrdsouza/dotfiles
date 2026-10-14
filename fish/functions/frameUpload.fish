@@ -11,6 +11,8 @@ function frameUpload --description 'Crop a photo to the photo frame shape and up
     #   artifacts), then uploads it. GRAVITY picks which part survives the
     #   crop: center (default), north, south, east, west, northeast, ...
     # Needs $CUBBY_USERNAME and $CUBBY_PASSWORD. $CUBBY_URL overrides the server.
+    # $CUBBY_READER sets who can read the photo (X-Cubby-Reader): a reader key
+    # name, "private" or "public"; default photoframes, "" sends no header.
     argparse -n frameUpload 'g/gravity=' 'h/help' -- $argv
     or return 2
 
@@ -25,6 +27,11 @@ function frameUpload --description 'Crop a photo to the photo frame shape and up
     set -q _flag_gravity; and set gravity $_flag_gravity
     set -l server https://cubby.dsouza.io
     set -q CUBBY_URL; and set server (string trim -r -c / -- $CUBBY_URL)
+    set -l reader photoframes
+    set -q CUBBY_READER; and set reader $CUBBY_READER
+    # Set access on every upload: without the header, cubby makes a new blob public
+    set -l reader_header
+    test -n "$reader"; and set reader_header -H "X-Cubby-Reader: $reader"
 
     if not test -f "$photo"
         echo "frameUpload: no such file: $photo" >&2
@@ -51,7 +58,7 @@ function frameUpload --description 'Crop a photo to the photo frame shape and up
     # Credentials go to curl on stdin, not argv, so they don't show up in `ps`
     set -l user (string replace -a '\\' '\\\\' -- "$CUBBY_USERNAME:$CUBBY_PASSWORD" | string replace -a '"' '\\"')
     set -l code (printf 'user = "%s"\n' $user | curl -K - -sS -o /dev/null -w '%{http_code}' \
-        -X POST -H 'Content-Type: image/jpeg' --data-binary @$out $server/photoframe)
+        -X POST -H 'Content-Type: image/jpeg' $reader_header --data-binary @$out $server/photoframe)
     or begin
         echo "frameUpload: upload failed (network error)" >&2
         return 1
@@ -60,6 +67,9 @@ function frameUpload --description 'Crop a photo to the photo frame shape and up
     switch $code
         case 200
             echo "Uploaded $out ("(math -s0 (wc -c < $out) / 1024)" KB) to $server/photoframe"
+        case 400
+            echo "frameUpload: 400 Bad Request; is '$reader' a cubby reader key? (set CUBBY_READER)" >&2
+            return 1
         case 401
             echo "frameUpload: 401 Unauthorized, check CUBBY_USERNAME/CUBBY_PASSWORD" >&2
             return 1
