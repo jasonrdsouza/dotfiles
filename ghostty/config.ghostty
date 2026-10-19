@@ -1,0 +1,16 @@
+# theme
+theme = Catppuccin Frappe
+
+# aesthetics
+background-opacity = 0.85
+background-blur=16
+
+# typography
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size=18
+font-thicken=true
+
+# run fish as the default shell
+shell-integration = fish
+command = /opt/homebrew/bin/fish --login --interactive
+

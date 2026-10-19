@@ -11,6 +11,10 @@ ln -s ~/dotfiles/fish/functions ~/.config/fish/functions
 rm ~/.config/fish/config.fish
 ln -s ~/dotfiles/fish/config.fish ~/.config/fish/config.fish
 
+# Ghostty
+rm -rf ~/.config/ghostty
+ln -s ~/dotfiles/ghostty ~/.config/ghostty
+
 # Alacritty
 rm -rf ~/.config/alacritty
 ln -s ~/dotfiles/alacritty ~/.config/alacritty
