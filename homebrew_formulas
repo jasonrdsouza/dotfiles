@@ -29,6 +29,7 @@ the_silver_searcher
 tig
 tmux
 tree
+tree-sitter-cli
 uv
 wget
 youtube-dl

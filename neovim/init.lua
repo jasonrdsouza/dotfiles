@@ -10,28 +10,31 @@ g.mapleader = " "
 -- so far, this has only happened to me with the nvim-tree plugin
 opt.shell = "/bin/bash"
 
--- Bootstrap package manager
-local install_path = fn.stdpath("data") .. "/site/pack/paqs/start/paq-nvim"
-if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({ "git", "clone", "--depth=1", "https://github.com/savq/paq-nvim.git", install_path })
-end
+-- Keep treesitter parsers in sync with the plugin when it updates
+vim.api.nvim_create_autocmd("PackChanged", {
+  callback = function(ev)
+    if ev.data.spec.name == "nvim-treesitter" and ev.data.kind == "update" then
+      if not ev.data.active then vim.cmd.packadd("nvim-treesitter") end
+      vim.cmd("TSUpdate")
+    end
+  end,
+})
 
--- Plugins
-require "paq" {
-  "savq/paq-nvim";                            -- let Paq manage itself
+-- Plugins (managed by the built-in vim.pack; update with :lua vim.pack.update())
+local gh = function(repo) return "https://github.com/" .. repo end
+vim.pack.add({
+  gh("tpope/vim-surround"),                       -- Vim grammer extension for surrounding characters
+  { src = gh("catppuccin/nvim"), name = "catppuccin" }, -- Catppuccin theme
+  gh("nvim-lualine/lualine.nvim"),                -- Statusline
+  gh("nvim-tree/nvim-tree.lua"),                  -- File tree viewer
+  gh("nvim-tree/nvim-web-devicons"),              -- Prettier icons
+  gh("smoka7/hop.nvim"),                          -- Easily hop around a file
+  gh("nvim-treesitter/nvim-treesitter"),          -- Better syntax highlighting
 
-  "tpope/vim-surround";                       -- Vim grammer extension for surrounding characters
-  "catppuccin/nvim";                          -- Catppuccin theme
-  "nvim-lualine/lualine.nvim";                -- Statusline
-  "kyazdani42/nvim-tree.lua";                 -- File tree viewer
-  "kyazdani42/nvim-web-devicons";             -- Prettier icons
-  "phaazon/hop.nvim";                         -- Easily hop around a file
-  "nvim-treesitter/nvim-treesitter";          -- Better syntax highlighting
-
-  "nvim-lua/plenary.nvim";                    -- Lua helper functions (dependency of telescope)
-  "nvim-telescope/telescope-fzy-native.nvim"; -- native fuzzy finder for Telescope
-  "nvim-telescope/telescope.nvim";            -- Extensible fuzzy finder
-}
+  gh("nvim-lua/plenary.nvim"),                    -- Lua helper functions (dependency of telescope)
+  gh("nvim-telescope/telescope-fzy-native.nvim"), -- native fuzzy finder for Telescope
+  gh("nvim-telescope/telescope.nvim"),            -- Extensible fuzzy finder
+}, { confirm = false })
 
 -- Use spaces instead of tabs
 local spaces = 2 -- Number of spaces to use
@@ -154,12 +157,8 @@ require'lualine'.setup {
 }
 
 -- Nvim Tree configuration
-g.nvim_tree_gitignore = 1
-g.nvim_tree_highlight_opened_files = 1
-g.nvim_tree_add_trailing = 1
-
 require'nvim-tree'.setup {
-  update_cwd = true
+  sync_root_with_cwd = true
 }
 map(NORMAL_MODE, LEADER .. "d", ":NvimTreeToggle<CR>", { silent = true })
 
@@ -170,20 +169,19 @@ require'hop'.setup{
 map(NORMAL_MODE, LEADER .. " ", ":HopChar2<CR>")
 
 -- Treesitter (syntax highlighting) configuration
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
-  ignore_install = { "javascript", "haskell" }, -- List of parsers to ignore installing
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = { "c", "rust" },  -- list of language that will be disabled
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-  },
-}
+-- Requires the tree-sitter CLI (brew install tree-sitter-cli) to build parsers
+local ts = require'nvim-treesitter'
+local ignore_install = { "javascript", "haskell" } -- List of parsers to skip installing
+local highlight_disable = { "c", "rust" }         -- List of languages to not highlight with treesitter
+ts.install(vim.tbl_filter(function(lang)          -- Installs asynchronously; already installed parsers are skipped
+  return not vim.list_contains(ignore_install, lang)
+end, ts.get_available()))
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function(args)
+    if vim.list_contains(highlight_disable, args.match) then return end
+    pcall(vim.treesitter.start, args.buf) -- No-op for filetypes without an installed parser
+  end,
+})
 
 -- Telescope configuration
 require("telescope").load_extension("fzy_native")
