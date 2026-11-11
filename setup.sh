@@ -38,6 +38,11 @@ ln -s ~/dotfiles/kakrc ~/.config/kak/kakrc
 rm -rf ~/.config/opencode
 ln -s ~/dotfiles/opencode ~/.config/opencode
 
+# Claude Code
+mkdir -p ~/.claude
+rm -f ~/.claude/settings.json
+ln -s ~/dotfiles/claude/settings.json ~/.claude/settings.json
+
 # Pry
 rm ~/.pryrc
 ln -s ~/dotfiles/pryrc ~/.pryrc
