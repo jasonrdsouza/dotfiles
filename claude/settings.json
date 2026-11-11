@@ -1,4 +1,8 @@
 {
+  "cleanupPeriodDays": 3650,
+  "enabledPlugins": {
+    "frontend-design@anthropic-plugin-directory": true
+  },
   "theme": "dark",
-  "cleanupPeriodDays": 3650
+  "editorMode": "vim"
 }
