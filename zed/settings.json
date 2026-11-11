@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
   "project_panel": {
     "dock": "left"
   },
@@ -39,9 +44,9 @@
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {
-    "mode": "system",
-    "light": "One Dark",
-    "dark": "One Dark"
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Gruvbox Dark"
   },
   "languages": {
     "Python": {
